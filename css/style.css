@@ -1,36 +1,45 @@
-nav {
-  height: 100px;
-  background-color: black;
-  color: white; }
+/*
+Error: Invalid CSS after "...///////////////": expected "}", was ""
+        on line 74 of css/scss/style.scss
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 1em; }
-  .content .nested {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 1em; }
-    .content .nested div {
-      background-color: #eee; }
-    .content .nested div:nth-child(odd) {
-      background-color: #ddd; }
+69:   }
+70: }
+71: 
+72: }
+73: ///////////////// BUREAU /////////////////
 
-@media screen and (min-width: 750px) {
-  .content {
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(100px, auto); }
-    .content .first {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: minmax(100px, auto); }
-    .content .second {
-      display: grid;
-      grid-auto-rows: minmax(100px, auto);
-      grid-template-columns: 3fr 1fr; }
-      .content .second .article2-1 {
-        grid-row: 1/3; } }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+css/scss/style.scss:74
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1207:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1137:in `expected'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1132:in `tok!'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:667:in `block'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:409:in `media_directive'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:222:in `special_directive'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:197:in `directive'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:684:in `block_child'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:677:in `block_contents'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:125:in `stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:41:in `parse'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:406:in `_to_tree'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:473:in `on_file_changed'
+/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:331:in `block in watch'
+/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
+/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
+/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
+/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...///////////////\": expected \"}\", was \"\"\A         on line 74 of css/scss/style.scss\A \A 69:   }\A 70: }\A 71: \A 72: }\A 73: ///////////////// BUREAU /////////////////"; }

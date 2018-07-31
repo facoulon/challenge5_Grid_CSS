@@ -23,17 +23,12 @@ nav {
     grid-gap: 1em;
     }
 }
-
 ///////////////// MOBILE /////////////////
 
-
 ///////////////// TABLETTE /////////////////
-
 @media screen and (min-width: 750px){
 
 .content {
-  grid-template-columns: 1fr;
-  grid-auto-rows: minmax(100px, auto);
   .first {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -47,12 +42,32 @@ nav {
     grid-row: 1/3
     }
   }
-}
-
 
 }
-
-
-
-
 ///////////////// TABLETTE /////////////////
+
+///////////////// BUREAU /////////////////
+@media screen and (min-width: 1000px){
+  .content{
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:"a b"
+                        "a c";
+  .first {
+    grid-area: b;
+  }
+  .second {
+    grid-area: c;
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 3fr 1fr;
+    .article2-1 {
+    grid-row: 1/3
+    }
+  }
+  .third {
+    grid-area: a;
+  }
+}
+
+}
+///////////////// BUREAU /////////////////
